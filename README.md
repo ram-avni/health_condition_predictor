@@ -9,8 +9,8 @@ In this project I built a model to predict whether a person has asthma, using da
 * [Modeling](#modeling)
   * [Choosing the Model](#choosingthemodel)
   * [Interpretation of Feature Importance](#featureimportance)
-* [Closing Thoughts](#closing)
-* [Next Steps](#nextsteps)
+* [Closing Thoughts and Next Steps](#closing)
+
 
 ## Data <a name="data"></a>
 ### Source <a name="source"></a>
