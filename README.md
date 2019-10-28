@@ -31,16 +31,16 @@ The target variable is: “Still having asthma”, classified as 1, is a Positiv
 Starting with about 10,000 observations (different individuals), I reduced the size to about 8,000 observations after cleaning and merging datasets.
 
 
-Most features were taken from:
+Most features were taken from: a <br />
 Medical:
- Diagnosed with asthma
- Age when first had asthma
- Family history / genetics
-Demographics:
- Household size
- Family income to poverty ratio
+ - Diagnosed with asthma
+ - Age when first had asthma
+ - Family history / genetics
+Demographics:a <br />
+ - Household size
+ - Family income to poverty ratio
 Dietary:
- Essential nutrients and vitamins
+ - Essential nutrients and vitamins
 
 
 
