@@ -41,9 +41,9 @@ Most features were taken from:
 - Dietary:
   - Essential nutrients and vitamins
 
-Of these two categories, there was a roughly 70/30 split between NAH and NTA, as seen below in the pie chart of class distribution.
+Of the two categories, people with asthma account for less than 10% of the population, as seen below in the pie chart of class distribution.
 
-![pie chart of class distribution](https://github.com/h-parker/AITA_classifier/blob/master/Images/class_dist.png)
+![pie chart of class distribution](https://github.com/ram-avni/health_condition_predictor/blob/master/visuals/1_class_dist.png)
 
 ### Features <a name="features"></a>
 
