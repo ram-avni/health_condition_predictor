@@ -46,7 +46,7 @@ Most features were taken from:
 - Dietary:
   - Essential nutrients and vitamins
   
-  I removed some features whose distribution revealed no impact on the prediction, like gender, as can see in the diagram below:
+  I removed some features whose distribution revealed no impact on the prediction, like gender, as can be seen in the diagram below:
   ![Gender distribution ](https://github.com/ram-avni/health_condition_predictor/blob/master/visuals/3_gender_dist.png)
 
 On the other hand, some features clearly had significant impact, such as family history and hereditary as well as age:
