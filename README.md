@@ -1,11 +1,11 @@
 # health_condition_predictor
 
-In this project I built a model to predict whether a person has asthma, using data records from the CDC National Health And Nutrition Examination Survey. These surveys are frequently used to provide national estimates on a wide range of major public health issues. I combined features from various surveys, and ran the model to test for this particular health condition (asthma). I found great interest in the CDC website because it contains many other datasets that can be used to predict other conditions as well, so this project was a way to get famiiliar with a very useful and practical source that data scientists use nationalluy.
+In this project I built a model to predict whether a person has asthma, using data records from the CDC National Health And Nutrition Examination Survey. These surveys are frequently used to provide national estimates on a wide range of major public health issues. I combined features from various surveys, and ran the model to test for this particular health condition (asthma). I found great interest in the CDC website because it contains many other datasets that can be used to predict other conditions as well, so this project was a way to get famiiliar with a very useful and practical source which data scientists use nationally.
 
 * [Data](#data)
   * [Source](#source)
-  * [Features](#features)
-* [EDA and Feature Engineering](#eda)
+* [Features](#features)
+  * [EDA and Feature Engineering](#eda)
   * [Hand Crafted Features](#byhand)
   * [Features from Libraries](#fromlibraries)
 * [Modeling](#modeling)
@@ -16,7 +16,39 @@ In this project I built a model to predict whether a person has asthma, using da
 
 ## Data <a name="data"></a>
 ### Source <a name="source"></a>
-At first, Reddit's own API seemed like the obvious choice, but we then realized they only allow you to access 1000 recent posts, which was an issue for two reasons -- 1) 1000 posts just wasn't enough, especially considering 2) we knew we would need to filter out quite a few unclassified posts (that simply didn't have enough comments to be classified by the moderators). So, we found [pushshift.io](http://pushshift.io), which has been scraping various social media sites for a few years. Using their API, we got about 4500 initial observations. After removing posts without classifications and posts with meaningless classifications (there were must less strict rules back in 2013, and people would classify posts with weird, meaningless phrases!), we had about 2000 observations split amongst the following categories: NTA (not the asshole), YTA (you're the asshole), ESH (everyone sucks here), and NAH (no assholes here). We condensed these four categories into two categories -- the user is a jerk (ESH and YTA) and the user is not a jerk (NTA and NAH) -- since ESH and NAH had very few observations. Of these two categories, there was a roughly 70/30 split between NAH and NTA, as seen below in the pie chart of class distribution.
+The CDC's National Health And Nutrition Examination Survey (NHANES) contains annual questionnaires, which in turn contain multiple datasets, including:
+Demographics Data
+Dietary Data
+Examination Data
+Laboratory Data
+Questionnaire Data
+Medical Conditions
+Limited Access Data
+
+I used the annual questionnaires from 2015-2016 (which is the latest available dataset as of October 2019 due to the rigorous procedure of the CDC data collection and statistical methods).
+The target variable is: “Still having asthma”, classified as 1, is a Positive (2 means never was diagnosed with asthma or no longer with asthma).
+
+Starting with about 10,000 observations (different individuals), I reduced the size to about 8,000 observations after cleaning and merging datasets.
+
+
+Most features were taken from:
+Medical:
+ Diagnosed with asthma
+ Age when first had asthma
+ Family history / genetics
+Demographics:
+ Household size
+ Family income to poverty ratio
+Dietary:
+ Essential nutrients and vitamins
+
+
+
+
+
+
+
+Of these two categories, there was a roughly 70/30 split between NAH and NTA, as seen below in the pie chart of class distribution.
 
 ![pie chart of class distribution](https://github.com/h-parker/AITA_classifier/blob/master/Images/class_dist.png)
 
