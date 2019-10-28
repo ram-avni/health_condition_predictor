@@ -17,33 +17,29 @@ In this project I built a model to predict whether a person has asthma, using da
 ## Data <a name="data"></a>
 ### Source <a name="source"></a>
 The CDC's National Health And Nutrition Examination Survey (NHANES) contains annual questionnaires, which in turn contain multiple datasets, including:
-Demographics Data
-Dietary Data
-Examination Data
-Laboratory Data
-Questionnaire Data
-Medical Conditions
-Limited Access Data
+- Demographics Data
+- Dietary Data
+- Examination Data
+- Laboratory Data 
+- Questionnaire Data
+- Medical Conditions
+- Limited Access Data
 
 I used the annual questionnaires from 2015-2016 (which is the latest available dataset as of October 2019 due to the rigorous procedure of the CDC data collection and statistical methods).
 The target variable is: “Still having asthma”, classified as 1, is a Positive (2 means never was diagnosed with asthma or no longer with asthma).
 
 Starting with about 10,000 observations (different individuals), I reduced the size to about 8,000 observations after cleaning and merging datasets.
 
-
-Most features were taken from:  <br />
-Medical:
- - Diagnosed with asthma
- - Age when first had asthma
- - Family history / genetics
- 
-Demographics: <br />
- - Household size
- - Family income to poverty ratio
- 
-Dietary:
- - Essential nutrients and vitamins
-
+Most features were taken from:
+- Medical:
+  - Diagnosed with asthma
+  - Age when first had asthma
+  - Family history / genetics
+- Demographics:
+  - Household size
+  - Family income to poverty ratio
+- Dietary:
+  - Essential nutrients and vitamins
 
 Of these two categories, there was a roughly 70/30 split between NAH and NTA, as seen below in the pie chart of class distribution.
 
